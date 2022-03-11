@@ -1,4 +1,4 @@
-﻿using System.Web;
+﻿using RandomQuotes.ErrorHandling;
 using System.Web.Mvc;
 
 namespace RandomQuotes
@@ -8,6 +8,7 @@ namespace RandomQuotes
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new AiHandleErrorAttribute());
         }
     }
 }
